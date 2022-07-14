@@ -1,0 +1,103 @@
+.worksheet {
+  width: 100%;
+  background-color: @bg-grey;
+}
+
+.worksheet__wrapper {
+  padding: 65px 0;
+}
+
+.worksheet__list {
+  max-width: 1110px;
+  margin: 0 auto;
+  padding: 80px 0;
+
+  &--detail {
+    padding: 0 0 52px 0;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.worksheet__content {
+  @media (min-width: @tablet-width) {
+    margin-right: 30px;
+  }
+}
+
+/**Text**/
+
+.worksheet__subtitle {
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 400;
+    margin: 0;
+    margin-bottom: 18px;
+
+    &--item {
+      margin-bottom: 4px;
+    }
+  }
+}
+
+.worksheet__desc {
+  @media (min-width: @tablet-width) {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    margin: 0;
+    margin-bottom: 12px;
+
+    &--last {
+      margin-bottom: 24px;
+    }
+  }
+}
+
+.worksheet__title {
+  @media (min-width: @tablet-width) {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 14px;
+  }
+}
+
+.worksheet__text{
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    margin: 0;
+    margin-bottom: 10px;
+
+    &--stock {
+      margin-bottom: 26px;
+    }
+  }
+}
+
+/**Photo**/
+
+.worksheet__photo {
+  width: 312px;
+  height: auto;
+
+  @media (min-width: @tablet-width) {
+    width: 541px;
+  }
+}
+
+.worksheet__img {
+  width: 312px;
+  height: auto;
+
+  @media (min-width: @tablet-width) {
+    width: 635px;
+  }
+}

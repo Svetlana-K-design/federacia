@@ -1,0 +1,49 @@
+.advantage {
+  width: 100%;
+  background-color: @bg-grey;
+}
+
+.advantage__list {
+  max-width: 1110px;
+  margin: 0 auto;
+  padding: 80px 0;
+  position: relative;
+}
+
+.advantage__item {
+  background-color: @white-basic;
+  border-radius: 10px;
+}
+
+.advantage__control {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  background-color: #6ca9ff;
+  border: none;
+
+  &--prev {
+    left: 0;
+    bottom: 0;
+  }
+
+  &--next {
+    right: 0;
+    bottom: 0;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 62px;
+    height: 62px;
+
+    &--prev {
+      left: -82px;
+      top: 50%;
+    }
+
+    &--next {
+      right: -82px;
+      top: 50%;
+    }
+  }
+}

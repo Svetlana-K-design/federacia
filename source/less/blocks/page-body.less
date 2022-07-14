@@ -1,0 +1,75 @@
+.page-body {
+  width: 100%;
+  background-image: url("../img/other/apartment-background.jpeg");
+  background-repeat: no-repeat;
+  background-size: initial;
+  background-position: top center;
+
+  @media (min-width: 1920px) {
+    background-size: contain;
+  }
+}
+
+.page-body__header {
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 104px;
+  }
+}
+
+.page-body__estimate {
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 292px;
+  }
+
+  @media (min-width: 1920px) {
+    margin-bottom: 291px;
+  }
+}
+
+.page-body__title {
+  font-size: 38px;
+  line-height: 42px;
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 11px;
+
+  &--worksheet,
+  &--price {
+    text-align: center;
+  }
+
+  &--master {
+    margin-bottom: 41px;
+  }
+
+  &--advantage,
+  &--price {
+    margin-bottom: 16px;
+  }
+
+  &--worksheet {
+    margin-bottom: 32px;
+  }
+}
+
+.page-body__service, .page-body__advantage {
+  @media (min-width: @tablet-width) {
+    margin-bottom: 43px;
+  }
+}
+
+.page-body__portfolio, .page-body__worksheet, .page-body__master {
+  @media (min-width: @tablet-width) {
+    margin-bottom: 80px;
+  }
+}
+
+.page-body__worksheet--detail {
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
+}

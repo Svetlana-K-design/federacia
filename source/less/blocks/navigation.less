@@ -1,0 +1,108 @@
+.navigatio {
+  /* Чтобы спозиционировать toggle */
+  position: relative;
+  background: @bg-menu;
+}
+
+.navigation__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.navigation__item {
+  margin: 0;
+  padding: 0;
+  padding-right: 32px;
+
+  &:last-child {
+    padding-right: 0;
+  }
+}
+
+.navigation__link {
+  color: @base-font;
+  font-family: "Alef", "Tahoma", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.navigation__toggle {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  border: none;
+  background-color: inherit;
+  top: 11px;
+  right: 0;
+  padding: 0;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.navigation--closed .navigation__toggle::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 8px;
+  width: 24px;
+  height: 2px;
+  background-color: @black-basic;
+  box-shadow: 0 8px 0 0 @black-basic, 0 16px 0 0 @black-basic;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .navigation--closed .navigation__list {
+    display: none;
+  }
+
+  .navigation--opened .navigation__list {
+    position: absolute;
+    top: 40px;
+    right: -20px;
+    bottom: 0;
+    width: 320px;
+  }
+}
+
+
+.navigation--opened .navigation__toggle {
+  margin-left: 20px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    right: 0;
+    width: 25px;
+    height: 2px;
+    background-color: @black-basic;
+  }
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.navigation--opened .navigation__toggle::before {
+  transform: rotate(45deg);
+}
+
+.navigation--opened .navigation__toggle::after {
+  transform: rotate(-45deg);
+}
+
+.navigation--nojs .navigation__toggle {
+  display: none;
+}
