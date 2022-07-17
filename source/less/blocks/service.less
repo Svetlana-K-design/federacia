@@ -2,16 +2,17 @@
   width: 100%;
   height: auto;
   background-color: @bg-grey;
+  text-align: center;
 }
 
 .service__list {
-  max-width: 1067px;
+  max-width: 1130px;
   margin: 0 auto;
   list-style: none;
-  padding: 10px 10px 0 10px;
+  padding: 10px 10px 43px 10px;
 
   @media (min-width: @tablet-width) {
-  padding: 90px 20px 10px 20px;
+  padding: 20px 20px 35px 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -20,7 +21,18 @@
 
 .service__item {
   width: 100%;
-  margin-bottom: 30px;
+  margin-bottom: 5px;
+  padding-top: 46px;
+
+  &::before {
+    content:"";
+    display: block;
+    width: 52px;
+    height: 52px;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    padding-bottom: 14px;
+  }
 
   @media (min-width: @tablet-width) {
     text-align: center;
@@ -28,18 +40,33 @@
     flex-direction: column;
     justify-content: space-between;
     width: 33%;
+    padding-top: 19px;
   }
 }
 
 .service__item:first-child {
+  &::before {
+    background-image: url("../img/icons/box.svg");
+  }
+
   @media (min-width: @tablet-width) {
-    margin-right: 2%;
+    margin-right: 0;
   }
 }
 
 .service__item:nth-child(2) {
+  &::before {
+    background-image: url("../img/icons/book-open.svg");
+  }
+
   @media (min-width: @tablet-width) {
-    margin-right: 5%;
+    margin-right: 0;
+  }
+}
+
+.service__item:last-child {
+  &::before {
+    background-image: url("../img/icons/clipboard.svg");
   }
 }
 
@@ -47,7 +74,7 @@
 .service__item:nth-child(3) {
 
   @media (min-width: @tablet-width) {
-    width: 27%;
+    width: 33%;
   }
 }
 
@@ -57,7 +84,7 @@
   line-height: 24px;
   font-weight: 700;
   margin: 0;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
 
 .service__desc {
@@ -68,26 +95,54 @@
   margin-bottom: 15px;
 }
 
+.service__desc-mobile,
+.service__title-mobile {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.service__desc-tablet,
+.service__title-tablet {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: inline;
+  }
+}
+
 .service__link {
   display: inline-block;
   font-size: 14px;
   line-height: 18px;
   font-weight: 700;
-  padding: 10px 5px;
+  padding: 6px 8px;
   border: 1px solid @decor-blue;
   color: @decor-blue;
   cursor: pointer;
   margin: 0 10px;
+
+  @media (min-width: @tablet-width) {
+  margin: 0 42px;
+  }
 }
 
 .service__item:nth-child(2) {
   .service__link {
     margin: 0 25px;
+
+    @media (min-width: @tablet-width) {
+    margin: 0 84px;
+    }
   }
 }
 
 .service__item:nth-child(3) {
   .service__link {
     margin: 0 35px;
+
+    @media (min-width: @tablet-width) {
+    margin: 0 91px;
+    }
   }
 }

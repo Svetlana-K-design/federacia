@@ -9,11 +9,12 @@
   <meta name=«keywords» content=«ремонт»>
   <link href="css/style.min.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
 </head>
 <body class="page-body">
-  <header class="page-body__header header">
-    <div class="header__logo">
-      <a class="header__logo-link" name="top" href="#top">
+  <header class="page-body__header header header--nobg">
+    <div class="header__logo" id="top">
+      <a class="header__logo-link" href="#top">
         <img class="header__logo-img" src="img/icons/logo.svg" width="70" height="71" alt="Логотип строительной компании Федерация ремонта" title="Логотип строительной компании Федерация ремонта">
       </a>
     </div>
@@ -30,7 +31,7 @@
           <a class="navigation__link" href="#">Отзывы</a>
         </li>
         <li class="navigation__item">
-          <a class="navigation__link" href="#">Мастера</a>
+          <a class="navigation__link" href="#master">Мастера</a>
         </li>
       </ul>
     </nav>
@@ -40,13 +41,13 @@
     <section class="page-body__estimate estimate">
       <h2 class="visually-hidden">Составить смету на ремонт квартиры</h2>
       <div class="estimate__text">
-        <p class="estimate__title"><strong>Сделаем ремонт квартиры без суеты, задержек и переплат!</strong></p>
-        <p class="estimate__desc">Делаем ремонт с рейтингом 4.9 / 5 . Подберём и закупим материал по оптовым ценам. Составим отчёт и доставим прямо до объекта!</p>
-        <p class="estimate__desc">Составим полную смету с точной стоимостью всех работ прямо на объекте! Замер и составление сметы — БЕСПЛАТНО!</p>
+        <p class="estimate__title"><strong><span class="estimate__item-one">Cделаем ремонт квартиры</span><span class="estimate__item-two"> без&nbsp;суеты, задержек и </span><span class="estimate__item-three">переплат!</span></strong></p>
+        <p class="estimate__desc">Делаем ремонт с рейтингом 4.9 / 5. Поможем с черновым и чистовым материалом : доставим и выкупим остатки.</p>
+        <p class="estimate__desc">Расcчитаем точную смету на объекте за 30 мин! Выезд инженера и составление сметы — БЕСПЛАТНО!</p>
       </div>
       <div class="estimate__form form">
-        <p class="estimate__desc">Получите 100%-точную смету на ремонт с материалом за 30 минут <span>БЕСПЛАТНО</span></p>
-        <form class="form__box" method="get" action="">
+        <p class="estimate__desc estimate__desc--form">Получите 100%-точную смету на ремонт с материалом за 30 минут <span>БЕСПЛАТНО</span></p>
+        <form class="form__box" method="get" action="#">
           <fieldset>
             <legend class="form__title">Какая у вас квартира?</legend>
             <ul class="form__list form__list--radio">
@@ -62,7 +63,17 @@
           </fieldset>
           <fieldset>
             <legend class="form__title">Какая площадь квартиры?</legend>
-            <input class="form__range" type="range" min="20" max="90" step="10" value="40">
+            <input class="form__range" type="range" min="20" max="90" step="10" value="40" name="step" list="step-values">
+            <datalist id="step-values">
+              <option value="20" label="20" />
+              <option value="30" label="30" />
+              <option value="40" label="40" />
+              <option value="50" label="50" />
+              <option value="60" label="60" />
+              <option value="70" label="70" />
+              <option value="80" label="80" />
+              <option value="90" label="90" />
+            </datalist>
           </fieldset>
           <div class="form__item form__item--checkbox">
             <p>
@@ -88,73 +99,73 @@
       <ul class="service__list">
         <li class="service__item">
           <h3 class="service__title">Поможем с материалами</h3>
-          <p class="service__desc">Подберём и доставим<br>материалы до объекта. <br>Предоставим полный отчет.</p>
+          <p class="service__desc">Помогаем с подбором и доставкой.<br>Предоставляем полную отчётность.</p>
           <a class="service__link" href="#">Узнать стоимость ремонта с материалами</a>
         </li>
         <li class="service__item">
-          <h3 class="service__title">Разработаем дизайн-проект</h3>
-          <p class="service__desc">Составим план перепланировки или дизайн-проект по вашим желаниям.  Поможем узаконить перепланировку.</p>
+          <h3 class="service__title service__title">Подготовим дизайн-проект</h3>
+          <p class="service__desc">Сделаем план монтажа или дизайн-проект.<br>Поможем узаконить перепланировку.</p>
           <a class="service__link" href="#">Получить помощь дизайнера</a>
         </li>
         <li class="service__item">
           <h3 class="service__title">Составим 100%-точную смету</h3>
-          <p class="service__desc">Рассчитаем стоимость ремонта с учётом даже самых мелких работ, укажем цены материалов. Стоимость, указанная в смете не изменяется! </p>
+          <p class="service__desc">Рассчитаем стоимость, сроки, материалы.<br>Не&nbsp;изменятся во время ремонта! </p>
           <a class="service__link" href="#">Получить смету бесплатно</a>
         </li>
       </ul>
     </section>
-    <section class="page-body__slider page-body__portfolio slider slider--photo" id="portfolio">
-      <h2 class="page-body__title">Сделаем ремонт под ключ<br>качественно</h2>
-      <p class="slider__desc"><b>Посмотрите наши последние проекты! За 2021 год завершили 276 объектов в Москве и МО с рейтингом 4.9 / 5.0</b></p>
-      <ul class="slider__list multiple-items">
-        <li class="slider__item">
+    <section class="page-body__slider page-body__portfolio portfolio slider slider--photo" id="portfolio">
+      <h2 class="page-body__title page-body__title--portfolio">Сделаем аккуратный ремонт под ключ</h2>
+      <p class="slider__desc"><b>Посмотрите последние работы! За 2020 год сделали 282 объекта в Москве и МО с рейтингом 4.8 / 5.0</b></p>
+      <ul class="slider__list responsive">
+        <li class="slider__item portfolio__item">
           <picture>
             <source type="image/webp" srcset="img/portfolio/apart-1.webp 1x, img/portfolio/apart-1@2x.webp 2x" />
             <img class="slider__photo-small" src="img/portfolio/apart-1.jpeg" srcset="img/portfolio/apart-1@2x.jpeg 2x" alt="Комната в голубых и синих тонах" title="Фото отремонтированной комнаты" />
           </picture>
         </li>
-        <li class="slider__item">
+        <li class="slider__item portfolio__item">
           <picture>
             <source type="image/webp" srcset="img/portfolio/apart-2.webp 1x, img/portfolio/apart-2@2x.webp 2x" />
             <img class="slider__photo-small" src="img/portfolio/apart-2.jpeg" srcset="img/portfolio/apart-2@2x.jpeg 2x" alt="Спальня в коричневых тонах" title="Фото отремонтированной комнаты" />
           </picture>
         </li>
-        <li class="slider__item slider__item--current">
+        <li class="slider__item slider__item--current portfolio__item">
           <picture>
             <source type="image/webp" srcset="img/portfolio/apart-3.webp 1x, img/portfolio/apart-3@2x.webp 2x" />
             <img class="slider__photo-small" src="img/portfolio/apart-3.jpeg" srcset="img/portfolio/apart-3@2x.jpeg 2x" alt="Бежевая гостинная с кожаной мебелью" title="Фото отремонтированной комнаты" />
           </picture>
         </li>
-        <li class="slider__item">
+        <li class="slider__item portfolio__item">
           <picture>
             <source type="image/webp" srcset="img/portfolio/apart-4.webp 1x, img/portfolio/apart-4@2x.webp 2x" />
             <img class="slider__photo-small" src="img/portfolio/apart-4.jpeg" srcset="img/portfolio/apart-4@2x.jpeg 2x" alt="Светлая спальня с зеркальных шкафом" title="Фото отремонтированной комнаты" />
           </picture>
         </li>
-        <li class="slider__item">
+        <li class="slider__item portfolio__item">
           <picture>
             <source type="image/webp" srcset="img/portfolio/apart-5.webp 1x, img/portfolio/apart-5@2x.webp 2x" />
-            <img class="slider__photo-small" src="img/portfolio/apart-5.jpeg" srcset="img/portfolio/apart-5@2x.jpeg 2x" alt="Светланя комната с панорамными окнами" title="Фото отремонтированной комнаты" />
+            <img class="slider__photo-small" src="img/portfolio/apart-5.jpeg" srcset="img/portfolio/apart-5@2x.jpeg 2x" alt="Светлая комната с панорамными окнами" title="Фото отремонтированной комнаты" />
           </picture>
         </li>
       </ul>
-      <div class="slider__controls">
+      <!--<div class="slider__controls">
         <button class="slider__button" type="button" aria-label="Первый слайд"></button>
         <button class="slider__button" type="button" aria-label="Второй слайд"></button>
         <button class="slider__button slider__button--current" type="button" aria-label="Третий слайд"></button>
         <button class="slider__button" type="button" aria-label="Четвёртый слайд"></button>
         <button class="slider__button" type="button" aria-label="Пятый слайд"></button>
-      </div>
+      </div>-->
     </section>
     <section class="page-body__worksheet worksheet">
       <div class="worksheet__list">
         <div class="worksheet__content">
-          <h2 class="page-body__title">Узнайте стоимость вашего ремонта!</h2>
-          <p class="worksheet__subtitle">Ответьте на 7 вопросов за 1 минуту и узнайте сколько стоит ремонт Вашей квартиры. Вы получите:</p>
-          <p class="worksheet__subtitle worksheet__subtitle--item"><b>Стоимость Вашего ремонта</b></p>
-          <p class="worksheet__desc">Выполняет инженер-сметчик произведет рассчёт по Вашим параметрам.</p>
-          <p class="worksheet__subtitle worksheet__subtitle--item"><b>Пример сметы для вашей квартиры</b></p>
-          <p class="worksheet__desc worksheet__desc--last">Подберем по результатам теста.</p>
+          <h2 class="page-body__title page-body__title--worksheet">Узнайте какой ремонт вам&nbsp;нужен!</h2>
+          <p class="worksheet__subtitle">Ответьте на 7 вопросов за 1 минуту и поймите какой ремонт нужен именно вам. После теста вы получите:</p>
+          <p class="worksheet__subtitle worksheet__subtitle--item"><b>Стоимость подобранного ремонта</b></p>
+          <p class="worksheet__desc worksheet__desc">Выполняет инженер-сметчик по вашим параметрам.</p>
+          <p class="worksheet__subtitle worksheet__subtitle--item"><b>Пример сметы на ваш ремонт под&nbsp;ключ</b></p>
+          <p class="worksheet__desc worksheet__desc--last">Подбирается по результатам теста</p>
           <button class="form__button form__button--worksheet" type="button">Рассчитать свой ремонт</button>
         </div>
         <div>
@@ -165,9 +176,9 @@
         </div>
       </div>
     </section>
-    <section class="page-body__slider page-body__master slider">
+    <section class="page-body__slider page-body__master slider" id="master">
       <h2 class="page-body__title page-body__title--master">Наши мастера</h2>
-      <ul class="slider__list list multiple-items">
+      <ul class="slider__list list responsive">
         <li class="slider__item list__master">
           <picture>
             <source type="image/webp" srcset="img/master/painter.webp 1x, img/master/painter@2x.webp 2x" />
@@ -213,34 +224,34 @@
             <source type="image/webp" srcset="img/master/decor.webp 1x, img/master/decor@2x.webp 2x" />
             <img class="slider__photo-master" src="img/master/decor.png" srcset="img/master/decor@2x.png 2x" alt="Фото Владимира Калугина" title="Фото мастера" />
           </picture>
-          <div class="list__caption">
+          <div class="list__caption list__caption--decor">
             <p class="list__subtitle"><b>Владимир Калугин</b></p>
             <p class="list__name">Мастер-универсал по декору</p>
           </div>
         </li>
       </ul>
-      <div class="slider__controls">
+      <!--<div class="slider__controls">
         <button class="slider__button" type="button" aria-label="Первый слайд"></button>
         <button class="slider__button" type="button" aria-label="Второй слайд"></button>
         <button class="slider__button slider__button--current" type="button" aria-label="Третий слайд"></button>
         <button class="slider__button" type="button" aria-label="Четвёртый слайд"></button>
         <button class="slider__button" type="button" aria-label="Пятый слайд"></button>
-      </div>
+      </div>-->
     </section>
     <section class="page-body__slider page-body__slider--advantage slider page-body__advantage advantage">
       <div class="advantage__list">
-        <h2 class="page-body__title page-body__title--advantage">Работаем с учётом каждой детали</h2>
-        <p class="slider__desc"><b>Соблюдаем стандарты ГОСТ, СНиП и DIN. Используем опыт, полученный за более чем 10 лет работы.</b></p>
-        <ul class="multiple-items slider__list">
+        <h2 class="page-body__title page-body__title--advantage">Трепетно относимся к&nbsp;деталям</h2>
+        <p class="slider__desc"><b>Работаем по ГОСТ, СНиП и DIN. Используем собственные хорошие практики ремонта наработанные за 10 лет</b></p>
+        <ul class="responsive slider__list">
           <li class="slider__item advantage__item">
             <picture>
               <source type="image/webp" srcset="img/other/sewerage.webp 1x, img/other/sewerage@2x.webp 2x" />
               <img class="slider__photo" src="img/other/sewerage.jpeg" srcset="img/other/sewerage@2x.jpeg 2x" alt="Фото санузла и профессиональных инструментов" title="Сантехника и канализация" />
             </picture>
             <h3 class="slider__item-title">Подключим сантехнику и канализацию</h3>
-            <p class="slider__item-desc">Производим разводку водоснабжения и канализации с учётом систем отопления и мест установки сантехнических приборов и бытовой техники. Используем трубы REHAU.</p>
-            <p class="slider__item-desc">Устанавливаем фильтры грубой и тонкой очистки, счетчики.</p>
-            <p class="slider__item-desc">Предоставляем гарантию качества!</p>
+            <p class="slider__item-desc">Делаем разводку трубами REHAU.<span>Учитываем места установки отопительных приборов и мест установки сантехники и бытовой&nbsp;техники.</span></p>
+            <p class="slider__item-desc">Монтируем систему канализации,<br>устанавливаем фильтры грубой и тонкой очистки,&nbsp;счетчики.</p>
+            <p class="slider__item-desc slider__item-desc--last">25 лет без протечек!</p>
           </li>
           <li class="slider__item advantage__item">
             <picture>
@@ -288,7 +299,7 @@
             <p class="slider__item-desc">Это позволяет сделать полы, стены и потолки идеально ровными, без уклонов и кривых углов.</p>
           </li>
         </ul>
-        <div class="slider__controls">
+      <!--<div class="slider__controls">
           <button class="slider__button" type="button" aria-label="Первый слайд"></button>
           <button class="slider__button" type="button" aria-label="Второй слайд"></button>
           <button class="slider__button slider__button--current" type="button" aria-label="Третий слайд"></button>
@@ -297,39 +308,39 @@
           <button class="slider__button" type="button" aria-label="Шестой слайд"></button>
         </div>
         <button class="advantage__control advantage__control--prev" type="button" aria-label="Предыдущий слайд"></button>
-        <button class="advantage__control advantage__control--next" type="button" aria-label="Следующий слайд"></button>
+        <button class="advantage__control advantage__control--next" type="button" aria-label="Следующий слайд"></button>-->
       </div>
     </section>
-    <section сlass="page-body__price price">
+    <section class="page-body__price price">
       <div class="price__wrapper">
         <h2 class="page-body__title page-body__title--price">Цены на комплексные ремонты квартир</h2>
         <div class="price__controls">
-          <button class="price__control price__control--active" type="button">Вторичка</button>
-          <button class="price__control" type="button">Новостройка</button>
+          <button class="price__control price__control--left price__control--active" type="button">Новостройка</button>
+          <button class="price__control price__control--right" type="button">Вторичка</button>
         </div>
         <div class="price__new-building">
           <ul class="slider__list">
             <li class="slider__item price__item">
               <h3 class="price__subtitle">Черновой ремонт</h3>
-              <p class="price__bold"><b>от 2 730 ₽/м²</b></p>
+              <p class="price__bold"><b>от 4 462 ₽/м²</b></p>
               <p class="price__text">цена для кв 32 м²</p>
-              <p class="price__text price__text--left">Черновой ремонт включает в себя:<br>Выравнивание стен, демонтаж существующих покрытий, стяжка пола, шпаклевка и штукатурка поверхностей, замена труб канализации и электрики.</p>
+              <p class="price__text price__text--left">Предчистовая отделка новостройки позволит исправить геометрию стен, выровнять полы, заменить электрику и сантехнику.</p>
               <button class="form__button price__button" type="button">Рассчитать стоимость 1 м²</button>
               <a class="price__link" href="#portfolio">Посмотреть список работ</a>
             </li>
             <li class="slider__item price__item">
               <h3 class="price__subtitle">Чистовой ремонт</h3>
-              <p class="price__bold"><b>от 2 680 ₽/м²</b></p>
+              <p class="price__bold"><b>от 3 791 ₽/м²</b></p>
               <p class="price__text">цена для кв 32 м²</p>
-              <p class="price__text price__text--left">Чистовой ремонт - финальный этап Вашего ремонта. Монтаж напольных покрытий, поклейка обоев, окраска стен и потолка. Предусмотрен монтаж сантехники и систем отопления.</p>
+              <p class="price__text price__text--left">Чистовая отделка новостройки — это как последний штрих идеального ремонта. Предусмотрена замена напольного покрытия и отделки стен.</p>
               <button class="form__button price__button" type="button">Рассчитать стоимость 1 м²</button>
               <a class="price__link" href="#portfolio">Посмотреть список работ</a>
             </li>
             <li class="slider__item price__item">
               <h3 class="price__subtitle">Ремонт «под ключ»</h3>
-              <p class="price__bold"><b>от 4 680 ₽/м²</b></p>
+              <p class="price__bold"><b>от 8 416 ₽/м²</b></p>
               <p class="price__text">цена для кв 32 м²</p>
-              <p class="price__text price__text--left">Комплексный ремонт квартиры с нуля. Включает в себя все виды работ. После окончания ремонта квартира полностью готова к проживанию.</p>
+              <p class="price__text price__text--left">Комплексный ремонт квартиры с нуля.<br>После ремонта вы сможете заселиться и проживать в готовой квартире.</p>
               <button class="form__button price__button" type="button">Рассчитать стоимость 1 м²</button>
               <a class="price__link" href="#portfolio">Посмотреть список работ</a>
             </li>
@@ -355,95 +366,123 @@
             </li>
             <li class="slider__item price__item">
               <h3 class="price__subtitle">Ремонт «под ключ»</h3>
-              <p class="price__bold"><b>от 4 680 ₽/м²</b></p>
+              <p class="price__bold"><b>от 8 416 ₽/м²</b></p>
               <p class="price__text">цена для кв 32 м²</p>
-              <p class="price__text price__text--left">Комплексный ремонт квартиры с нуля. Включает в себя все виды работ. После окончания ремонта квартира полностью готова к проживанию.</p>
+              <p class="price__text price__text--left">Комплексный ремонт квартиры с нуля.<br> После окончания ремонта квартира полностью готова к проживанию.</p>
               <button class="form__button price__button" type="button">Рассчитать стоимость 1 м²</button>
               <a class="price__link" href="#portfolio">Посмотреть список работ</a>
             </li>
           </ul>
         </div>
-        <div>
-        </section>
-        <section class="page-body__worksheet page-body__worksheet--detail worksheet">
-          <div class="worksheet__wrapper">
-            <h2 class="page-body__title page-body__title--worksheet">Поможем с подбором и закупкой материалов</h2>
-            <div class="worksheet__list worksheet__list--detail">
-              <div class="worksheet__content">
-                <picture>
-                  <source type="image/webp" srcset="img/other/stock.webp 1x, img/other/stock@2x.webp 2x" />
-                  <img class="worksheet__img" src="img/other/stock.jpeg" srcset="img/other/stock@2x.jpeg 2x" alt="Фото склада с паллетами строительных смесей" title="Подбор и закупка материалов" />
-                </picture>
-              </div>
-              <div>
-                <h3 class="worksheet__title">Специально оборудованный склад строительных материалов</h3>
-                <p class="worksheet__text worksheet__text--stock">Экономим Вам деньги - закупаем материалы у&nbsp;29 поставщиков по оптовым ценам.</p>
-                <p class="worksheet__text worksheet__text--stock">Бережём ваше время - бесплатно доставим материалы прямо на объект.</p>
-                <p class="worksheet__text worksheet__text--stock">Контролируем качество используемых материалов. Закупаем материалы у&nbsp;поставщиков, соблюдающих стандарты ГОСТ. Соблюдаем все условия хранения.</p>
-                <button class="form__button" type="button">Рассчитать стоимость с&nbsp;нашими материалами</button>
-              </div>
-            </div>
-            <div class="worksheet__list worksheet__list--detail">
-              <div class="worksheet__content">
-                <h3 class="worksheet__title">Нужен дизайн-проект?</h3>
-                <p class="worksheet__slogan"><b>Разработаем индивидуальную схему планировки и проект под ваши желания.</b></p>
-                <p class="worksheet__text">Составим план зонирования и монтажа межкомнатных перегородок.</p>
-                <p class="worksheet__text">Сделаем схему размещения мебели и бытовых приборов. Подготовим визуализацию проекта.</p>
-                <p class="worksheet__text">Заранее составим смету по всем необходимым материалам и предстоящим работам.</p>
-                <p class="worksheet__text">Узаконим перепланировку без вашего участия.</p>
-                <button class="form__button" type="button">Обратиться к дизайнеру</button>
-              </div>
-              <div>
-                <picture>
-                  <source type="image/webp" srcset="img/other/project.webp 1x, img/other/project@2x.webp 2x" />
-                  <img class="worksheet__img" src="img/other/project.jpeg" srcset="img/other/project@2x.jpeg 2x" alt="Визуализация проекта ремонта" title="Подбор и закупка материалов" />
-                </picture>
-              </div>
-            </div>
+      </div>
+    </section>
+    <section class="page-body__worksheet page-body__worksheet--detail worksheet">
+      <div class="worksheet__wrapper worksheet__wrapper--detail">
+        <h2 class="page-body__title page-body__title--detail">Помогаем с подбором и закупкой материалов</h2>
+        <div class="worksheet__list worksheet__list--detail">
+          <div class="worksheet__content worksheet__content--stock">
+            <picture>
+              <source type="image/webp" srcset="img/other/stock.webp 1x, img/other/stock@2x.webp 2x" />
+              <img class="worksheet__img" src="img/other/stock.jpeg" srcset="img/other/stock@2x.jpeg 2x" alt="Фото склада с паллетами строительных смесей" title="Подбор и закупка материалов" />
+            </picture>
           </div>
-        </section>
-      </main>
-      <footer class="page-body__footer footer">
-        <div class="footer__wrapper">
-          <div class="footer__column">
-            <h2 class="visually-hidden">Контактная информация</h2>
-            <div class="footer__column-address">
-              <h3 class="footer__title">Адрес главного офиса</h3>
-              <p class="footer__text">г.&nbsp;Москва, ММДЦ «Москва-Сити» Пресненская набережная 12, Башня Федерация Восток этаж 22, офис 2213</p>
-            </div>
-            <div>
-              <h3 class="footer__title">Консультация клиентов</h3>
-              <a href="tel:+74954143148" class="footer__phone">+7 (495) 414-31-48</a>
-              <p class="footer__text">без выходных c 08:00 до 22:00</p>
-            </div>
-            <div>
-              <h3 class="footer__title">Электронная почта</h3>
-              <div>
-                <p class="footer__text">для консультации по ремонту</p>
-                <a class="contacts__link" href="mailto:site@federacia-remonta.ru">site@federacia-remonta.ru</a>
-              </div>
-              <div>
-                <p class="footer__text">по вопросам сотрудничества</p>
-                <a class="contacts__link" href="kp@federacia-remonta.ru">kp@federacia-remonta.ru</a>
-              </div>
-            </div>
-            <button class="form__button" type="button">Заказать обратный звонок</button>
+          <div>
+            <h3 class="worksheet__title">Собственный склад черновых материалов в пределах МКАД</h3>
+            <p class="worksheet__text worksheet__text--stock">Экономим ваши деньги — закупаем у 28 надежных поставщиков по оптовым ценам со скидкой на объём.</p>
+            <p class="worksheet__text worksheet__text--stock">Экономим ваше время — доставляем материалы на объект по требованию, чтобы избежать простоя.</p>
+            <p class="worksheet__text worksheet__text--stock">Проверяем качество закупленных материалов. Храним материалы по ГОСТу.</p>
+            <p class="worksheet__text worksheet__text--stock">У нас есть хорошие скидки от партнеров на двери и кухонные гарнитуры.</p>
+            <button class="form__button form__button--stock" type="button">Рассчитать стоимость с&nbsp;нашими материалами</button>
           </div>
         </div>
-      </footer>
-      <script src="js/script.min.js"></script>
-      <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-      <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-      <script type="text/javascript" src="slick/slick.min.js"></script>
+        <div class="worksheet__list worksheet__list--detail">
+          <div class="worksheet__content worksheet__content--text">
+            <h3 class="worksheet__title worksheet__title-mobile">Нужен дизайн-проект?</h3>
+            <p class="worksheet__slogan"><b>Сделаем схему планировки или дизайн-проект!</b></p>
+            <p class="worksheet__text">Сделаем план монтажа перегородок, разметку электрики и сантехники.</p>
+            <p class="worksheet__text">Сделаем план зонирования помещений и расстановки мебели, визуализируем при необходимости.</p>
+            <p class="worksheet__text">Посчитаем черновые и чистовые материалы, сантехнику и электрику. Узаконим перепланировку без вашего участия.</p>
+            <button class="form__button form__button--worksheet form__buttom-mobile" type="button">Получить помощь у дизайнера</button>
+          </div>
+          <div class="worksheet__content-photo">
+            <picture>
+              <source type="image/webp" srcset="img/other/project.webp 1x, img/other/project@2x.webp 2x" />
+              <img class="worksheet__img" src="img/other/project.jpeg" srcset="img/other/project@2x.jpeg 2x" alt="Визуализация проекта ремонта" title="Подбор и закупка материалов" />
+            </picture>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="page-body__footer footer">
+    <div class="footer__wrapper">
+      <div class="footer__column">
+        <h2 class="visually-hidden">Контактная информация</h2>
+        <div class="footer__column-address">
+          <h3 class="footer__title">Адрес главного офиса</h3>
+          <p class="footer__text">г.&nbsp;Москва, ММДЦ «Москва-Сити» Пресненская набережная 12, Башня Федерация Восток этаж 22, офис 2213</p>
+        </div>
+        <div>
+          <h3 class="footer__title">Консультация клиентов</h3>
+          <a href="tel:+74954143148" class="footer__phone">+7 (495) 414-31-48</a>
+          <p class="footer__text">без выходных c 08:00 до 22:00</p>
+        </div>
+        <div>
+          <h3 class="footer__title">Электронная почта</h3>
+          <div>
+            <p class="footer__text footer__text--mail">для консультации по ремонту</p>
+            <a class="footer__link" href="mailto:site@federacia-remonta.ru">site@federacia-remonta.ru</a>
+          </div>
+          <div class="footer__email">
+            <p class="footer__text footer__text--mail">по вопросам сотрудничества</p>
+            <a class="footer__link" href="kp@federacia-remonta.ru">kp@federacia-remonta.ru</a>
+          </div>
+        </div>
+        <button class="form__button form__button--footer" type="button">Заказать обратный звонок</button>
+      </div>
+    </div>
+  </footer>
+  <script src="js/script.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="slick/slick.min.js"></script>
 
-      <script type="text/javascript">
-      $(document).ready(function(){
-        $('.multiple-items').slick({
-          infinite: true,
+  <script type="text/javascript">
+  $('.responsive').slick({
+    dots: true,
+    infinite: false,
+    speed: 300,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1900,
+        settings: {
           slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 2,
           slidesToScroll: 1
-        });
-      });
-      </script>
-    </body>
-    </html>
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+      // You can unslick at a given breakpoint now by adding:
+      // settings: "unslick"
+      // instead of a settings object
+    ]
+  });
+  </script>
+</body>
+</html>

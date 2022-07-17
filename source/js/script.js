@@ -12,3 +12,13 @@ navToggle.addEventListener('click', function() {
     navMain.classList.remove('navigation--opened');
   }
 });
+
+navToggle.addEventListener('click', function() {
+  if (navMain.classList.contains('header--white')) {
+    navMain.classList.remove('header--white');
+    navMain.classList.add('header--nobg');
+  } else {
+    navMain.classList.add('header--white');
+    navMain.classList.remove('header--nobg');
+  }
+});

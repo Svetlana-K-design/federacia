@@ -1,9 +1,13 @@
 .page-body {
   width: 100%;
-  background-image: url("../img/other/apartment-background.jpeg");
+  background-image: url("../img/other/apartment-background-mobile.jpeg");
   background-repeat: no-repeat;
   background-size: initial;
   background-position: top center;
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/other/apartment-background.jpeg");
+  }
 
   @media (min-width: 1920px) {
     background-size: contain;
@@ -12,63 +16,128 @@
 
 .page-body__header {
   margin: 0 auto;
+  margin-bottom: 48px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 104px;
+    margin-bottom: 95px;
   }
 }
 
 .page-body__estimate {
   margin: 0 auto;
+  margin-bottom: 46px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 292px;
   }
 
   @media (min-width: 1920px) {
-    margin-bottom: 291px;
+    margin-bottom: 312px;
   }
 }
 
 .page-body__title {
-  font-size: 38px;
-  line-height: 42px;
+  font-size: 28px;
+  line-height: 32px;
   font-weight: 700;
   margin: 0;
   margin-bottom: 11px;
 
   &--worksheet,
-  &--price {
+  &--price,
+  &--detail {
     text-align: center;
   }
 
   &--master {
-    margin-bottom: 41px;
+    margin-bottom: 25px;
   }
 
-  &--advantage,
   &--price {
-    margin-bottom: 16px;
+    margin-bottom: 22px;
   }
 
   &--worksheet {
-    margin-bottom: 32px;
+    margin-bottom: 16px;
+  }
+
+  &--portfolio {
+    margin-bottom: 26px;
+  }
+
+  &--advantage {
+    margin-bottom: 22px;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 38px;
+    line-height: 42px;
+
+    &--worksheet {
+      margin-bottom: 5px;
+      text-align: left;
+    }
+
+    &--portfolio {
+      margin-bottom: 15px;
+    }
+
+    &--master {
+      margin-bottom: 32px;
+    }
   }
 }
 
-.page-body__service, .page-body__advantage {
+.page-body__title-mobile {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.page-body__service {
+  margin-bottom: 50px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 81px;
+  }
+}
+
+.page-body__advantage {
+  margin-bottom: 50px;
+
   @media (min-width: @tablet-width) {
     margin-bottom: 43px;
   }
 }
 
-.page-body__portfolio, .page-body__worksheet, .page-body__master {
+.page-body__portfolio {
+  margin-bottom: 76px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 118px;
+  }
+}
+
+
+.page-body__worksheet {
+  margin-bottom: 50px;
+
   @media (min-width: @tablet-width) {
     margin-bottom: 80px;
   }
 }
 
+.page-body__master {
+  margin-bottom: 96px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 123px;
+  }
+}
+
 .page-body__worksheet--detail {
+  margin-bottom: 0;
+
   @media (min-width: @tablet-width) {
     margin-bottom: 0;
   }

@@ -1,18 +1,22 @@
 .advantage {
-  width: 100%;
   background-color: @bg-grey;
 }
 
 .advantage__list {
   max-width: 1110px;
   margin: 0 auto;
-  padding: 80px 0;
+  padding: 52px 0 79px;
   position: relative;
+
+  @media (min-width: @tablet-width) {
+    padding: 85px 0;
+  }
 }
 
 .advantage__item {
   background-color: @white-basic;
   border-radius: 10px;
+  flex-direction: column;
 }
 
 .advantage__control {

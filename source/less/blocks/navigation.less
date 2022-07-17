@@ -1,33 +1,42 @@
-.navigatio {
-  /* Чтобы спозиционировать toggle */
+.navigation {
   position: relative;
-  background: @bg-menu;
 }
 
 .navigation__list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
+  .list-reset();
+
+  @media(min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .navigation__item {
   margin: 0;
   padding: 0;
-  padding-right: 32px;
+  padding-bottom: 12px;
 
-  &:last-child {
-    padding-right: 0;
+  @media(min-width: @tablet-width) {
+    padding-right: 32px;
+    padding-bottom: 30px;
+
+    &:last-child {
+      padding-right: 0;
+    }
   }
 }
 
 .navigation__link {
   color: @base-font;
-  font-family: "Alef", "Tahoma", sans-serif;
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: 700;
+  font-family: "Qanelas", "Tahoma", sans-serif;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 500;
+
+  @media(min-width: @tablet-width) {
+    font-size: 18px;
+    line-height: 24px;
+  }
 }
 
 .navigation__toggle {
@@ -37,8 +46,8 @@
   cursor: pointer;
   border: none;
   background-color: inherit;
-  top: 11px;
-  right: 0;
+  top: -25px;
+  right: 14px;
   padding: 0;
 
   &:focus {
@@ -53,8 +62,8 @@
   left: 8px;
   width: 24px;
   height: 2px;
-  background-color: @black-basic;
-  box-shadow: 0 8px 0 0 @black-basic, 0 16px 0 0 @black-basic;
+  background-color: @decor-blue;
+  box-shadow: 0 8px 0 0 @decor-blue, 0 16px 0 0 @decor-blue;
 
   @media (min-width: 768px) {
     display: none;
@@ -68,9 +77,8 @@
 
   .navigation--opened .navigation__list {
     position: absolute;
-    top: 40px;
+    top: 75px;
     right: -20px;
-    bottom: 0;
     width: 320px;
   }
 }
@@ -86,8 +94,8 @@
     top: 15px;
     right: 0;
     width: 25px;
-    height: 2px;
-    background-color: @black-basic;
+    height: 3px;
+    background-color: @decor-blue;
   }
 
   @media (min-width: 768px) {

@@ -1,6 +1,7 @@
 .price__wrapper {
   max-width: 1110px;
   margin: 0 auto;
+  padding: 0 24px 34px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 91px;
@@ -9,7 +10,7 @@
 
 .price__controls {
   text-align: center;
-  margin-bottom: 16px;
+  margin-bottom: 26px;
 }
 
 .price__control {
@@ -19,13 +20,26 @@
   border-bottom: 1px solid #a2a2a2;
   color: #a2a2a2;
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 20px;
-  font-family: "Alef", "Tahoma", sans-serif;
+  font-family: "Qanelas", "Tahoma", sans-serif;
+  text-align: left;
 
   &--active {
     color:  @decor-blue;
     border-bottom: 1px solid @decor-blue;
+  }
+
+  &--left {
+    text-align: left;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &--right {
+    text-align: right;
+    padding-right: 0;
+    padding-left: 42px;
   }
 }
 
@@ -37,13 +51,15 @@
   padding: 24px;
   border-radius: 10px;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 17px;
 
   @media (min-width: @tablet-width) {
     width: 310px;
     margin-bottom: 0;
   }
 }
+
+/**Text**/
 
 .price__subtitle {
   font-size: 20px;
@@ -66,13 +82,18 @@
   line-height: 20px;
   font-weight: 400;
   margin: 0;
-  margin-bottom: 11px;
+  margin-bottom: 24px;
 
   &--left {
     text-align: left;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
     align-self: flex-start;
   }
+}
+
+.price__item:nth-child(2) .price__text--left {
+
+  margin-bottom: 12px;
 }
 
 .price__button {
@@ -83,13 +104,13 @@
 
 .price__link {
   display: block;
-  width: 100%;
+  width: 98.5%;
   font-size: 16px;
   font-weight: 700;
   line-height: 20px;
   border: 2px solid #a2a2a2;
   color: #a5a5a5;
-  padding: 15px 0;
+  padding: 13px 0;
   text-align: center;
   border-radius: 5px;
 }

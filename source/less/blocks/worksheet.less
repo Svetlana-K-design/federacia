@@ -4,39 +4,103 @@
 }
 
 .worksheet__wrapper {
+  padding: 50px 24px;
+
+  &--detail {
+    padding: 49px 24px 21px;
+  }
+
+  @media (min-width: @tablet-width) {
   padding: 65px 0;
+}
 }
 
 .worksheet__list {
   max-width: 1110px;
   margin: 0 auto;
-  padding: 80px 0;
+  padding: 50px 24px 43px;
 
   &--detail {
-    padding: 0 0 52px 0;
+    display: flex;
+    flex-direction: column;
+    padding: 9px 0 69px;
   }
 
   @media (min-width: @tablet-width) {
     display: flex;
     align-items: center;
+    padding: 74px 0;
+
+    &--detail {
+      flex-direction: row;
+    }
+  }
+}
+
+.worksheet__list--detail:last-of-type {
+  flex-direction: column-reverse;
+  padding: 9px 0 0;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
   }
 }
 
 .worksheet__content {
+  margin-bottom: 0;
+
+  &--stock {
+    margin-bottom: 5px;
+  }
+
+  &--text {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 60px;
+      width: 4px;
+      height: 228px;
+      background-color: #cce1ff;
+    }
+  }
+
   @media (min-width: @tablet-width) {
     margin-right: 30px;
   }
 }
 
+.worksheet__content-photo {
+  margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
+}
+
+.worksheet__content--text .worksheet__text {
+  padding-left: 14px;
+}
+
 /**Text**/
 
 .worksheet__subtitle {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+  margin: 0;
+  margin-bottom: 14px;
+
+  &--item {
+    margin-bottom: 4px;
+  }
+
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 28px;
-    font-weight: 400;
-    margin: 0;
-    margin-bottom: 18px;
+    margin-bottom: 20px;
 
     &--item {
       margin-bottom: 4px;
@@ -44,12 +108,24 @@
   }
 }
 
-.worksheet__desc {
+.worksheet__subtitle-mobile {
   @media (min-width: @tablet-width) {
-    font-size: 14px;
-    line-height: 20px;
-    font-weight: 400;
-    margin: 0;
+    display: none;
+  }
+}
+
+.worksheet__desc {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  margin: 0;
+  margin-bottom: 9px;
+
+  &--last {
+    margin-bottom: 23px;
+  }
+
+  @media (min-width: @tablet-width) {
     margin-bottom: 12px;
 
     &--last {
@@ -58,22 +134,45 @@
   }
 }
 
+
+.worksheet__title-mobile {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: inline-block;
+  }
+}
+
 .worksheet__title {
+  margin: 0;
+  margin-bottom: 14px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 600;
+
   @media (min-width: @tablet-width) {
     font-size: 24px;
     line-height: 32px;
     font-weight: 700;
-    margin: 0;
     margin-bottom: 14px;
   }
 }
 
-.worksheet__text{
+.worksheet__text {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  margin: 0;
+  margin-bottom: 8px;
+
+  &:last-of-type {
+    margin-bottom: 17px;
+  }
+
   @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 24px;
     font-weight: 400;
-    margin: 0;
     margin-bottom: 10px;
 
     &--stock {
@@ -82,22 +181,39 @@
   }
 }
 
+.worksheet__slogan {
+  margin: 0;
+  margin-bottom: 14px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 600;
+
+  @media (min-width: @tablet-width) {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+    margin-bottom: 14px;
+  }
+}
+
 /**Photo**/
 
 .worksheet__photo {
   width: 312px;
-  height: auto;
+  height: 180px;
 
   @media (min-width: @tablet-width) {
     width: 541px;
+    height: auto;
   }
 }
 
 .worksheet__img {
   width: 312px;
-  height: auto;
+  height: 191px;
 
   @media (min-width: @tablet-width) {
     width: 635px;
+    height: auto;
   }
 }
