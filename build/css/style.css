@@ -391,7 +391,7 @@ a {
 }
 @media (min-width: 1920px) {
   .page-body__estimate {
-    margin-bottom: 312px;
+    margin-bottom: 286px;
   }
 }
 .page-body__title {
@@ -868,6 +868,7 @@ a {
   position: relative;
   display: flex;
   align-items: flex-end;
+  justify-content: space-between;
 }
 .list__master::before {
   content: "";
@@ -886,6 +887,7 @@ a {
   }
   .list__master::before {
     height: 138px;
+    width: 85%;
   }
 }
 .list__caption {
@@ -1426,8 +1428,18 @@ a {
   border: 2px solid #0069ff;
   background-image: url("../img/icons/check-blue.svg");
 }
+datalist {
+  display: flex;
+}
+datalist option[labale=20] {
+  font-family: "Qanelas", "Tahoma", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #031b4e;
+}
 input[type=range] {
-  width: 100%;
+  width: 90%;
 }
 input[type=range]::range-track {
   border: none;
@@ -1447,13 +1459,6 @@ input[type=range]::ticks-before {
 input[type=range]::fill-lower {
   background-color: #0069ff;
 }
-/**option label {
-  font-family: "Qanelas", "Tahoma", sans-serif;
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: 400;
-  color: @base-font;
-}**/
 .form__link {
   font-size: 10px;
   line-height: 14px;
