@@ -15,6 +15,7 @@ const del = require("del");
 const sync = require("browser-sync").create();
 const ghPages = require('gulp-gh-pages');
 const less = require("gulp-less");
+var concat = require("gulp-concat");
 
 // Styles
 
@@ -183,4 +184,12 @@ exports.default = gulp.series(
 gulp.task('deploy', function() {
   return gulp.src('./build/**/*')
     .pipe(ghPages());
+});
+
+//GulpContact 
+
+gulp.task('scripts', function() {
+  return gulp.src('./lib/*.js')
+    .pipe(concat('all.js'))
+    .pipe(gulp.dest('./dist/'));
 });

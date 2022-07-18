@@ -16,7 +16,7 @@
     bottom: 0;
   }
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @desktop-width) {
     max-width: 540px;
 
     &::before {
@@ -36,6 +36,11 @@
     padding-bottom: 13px;
     padding-right: 12px;
   }
+
+  @media (min-width: @desktop-width)  {
+    padding-bottom: 42px;
+    padding-left: 54px;
+  }
 }
 
 .list__subtitle {
@@ -44,7 +49,7 @@
   font-weight: 700;
   margin: 0;
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @desktop-width) {
   font-size: 20px;
   line-height: 32px;
   }
@@ -56,7 +61,7 @@
   font-weight: 400;
   margin: 0;
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @desktop-width) {
   font-size: 16px;
   line-height: 24px;
   }

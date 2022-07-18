@@ -6,10 +6,10 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Ремонт квартиры без суеты, задержек и переплат!</title>
   <meta name="description" content="Сделаем ремонт квартиры без суеты, задержек и переплат! Сделаем ремонт под ключ качественно!">
-  <meta name=«keywords» content=«ремонт»>
-  <link href="css/style.min.css" rel="stylesheet">
+  <meta name=«keywords» content=«ремонт под ключ, ремонт без переплат, ремонт без задержек»>
   <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
   <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+  <link href="css/style.min.css" rel="stylesheet">
 </head>
 <body class="page-body">
   <header class="page-body__header header header--nobg">
@@ -63,7 +63,7 @@
           </fieldset>
           <fieldset>
             <legend class="form__title">Какая площадь квартиры?</legend>
-            <input class="form__range" type="range" min="20" max="90" step="10" value="40" name="step" list="step-values">
+            <input class="form__range" type="range" min="20" max="90" step="1" value="40" name="step" list="step-values">
             <datalist  id="step-values">
               <option value="20" label="20" />
               <option value="30" label="30" />
@@ -90,7 +90,7 @@
             </p>
           </div>
           <p class="form__link">Нажимая на кнопку, вы даете согласие<br>на обработку <a href="/politika-obrabotki-personalnyh-dannyh/">персональных данных</a></p>
-          <button class="form__button" type="submit">Получить 100%-точную смету</button>
+          <button class="form__button  form__button--submit" type="submit">Получить 100%-точную смету</button>
         </form>
       </div>
     </section>
@@ -109,7 +109,7 @@
         </li>
         <li class="service__item">
           <h3 class="service__title">Составим 100%-точную смету</h3>
-          <p class="service__desc">Рассчитаем стоимость, сроки, материалы.<br>Не&nbsp;изменятся во время ремонта! </p>
+          <p class="service__desc">Рассчитаем стоимость, сроки, материалы.<br>Не&nbsp;изменятся во время ремонта!</p>
           <a class="service__link" href="#">Получить смету бесплатно</a>
         </li>
       </ul>
@@ -149,13 +149,6 @@
           </picture>
         </li>
       </ul>
-      <!--<div class="slider__controls">
-        <button class="slider__button" type="button" aria-label="Первый слайд"></button>
-        <button class="slider__button" type="button" aria-label="Второй слайд"></button>
-        <button class="slider__button slider__button--current" type="button" aria-label="Третий слайд"></button>
-        <button class="slider__button" type="button" aria-label="Четвёртый слайд"></button>
-        <button class="slider__button" type="button" aria-label="Пятый слайд"></button>
-      </div>-->
     </section>
     <section class="page-body__worksheet worksheet">
       <div class="worksheet__list">
@@ -178,8 +171,9 @@
     </section>
     <section class="page-body__slider page-body__master slider" id="master">
       <h2 class="page-body__title page-body__title--master">Наши мастера</h2>
-      <ul class="slider__list list responsive">
-        <li class="slider__item list__master">
+      <div class="slider__list list responsive">
+        <div>
+        <div class="slider__item list__master">
           <picture>
             <source type="image/webp" srcset="img/master/painter.webp 1x, img/master/painter@2x.webp 2x" />
             <img class="slider__photo-master" src="img/master/painter.png" srcset="img/master/painter@2x.png 2x" alt="Фото Нины Сафоновой" title="Фото мастера" />
@@ -188,8 +182,10 @@
             <p class="list__subtitle"><b>Нина Сафонова</b></p>
             <p class="list__name">Маляр</p>
           </div>
-        </li>
-        <li class="slider__item list__master">
+        </div>
+      </div>
+      <div>
+        <div class="slider__item list__master">
           <picture>
             <source type="image/webp" srcset="img/master/tiler.webp 1x, img/master/tiler@2x.webp 2x" />
             <img class="slider__photo-master" src="img/master/tiler.png" srcset="img/master/tiler@2x.png 2x" alt="Фото Сергея Яковлева" title="Фото мастера" />
@@ -198,8 +194,10 @@
             <p class="list__subtitle"><b>Сергей Яковлев</b></p>
             <p class="list__name">Плиточник</p>
           </div>
-        </li>
-        <li class="slider__item slider__item--current list__master">
+        </div>
+      </div>
+    <div>
+        <div class="slider__item slider__item--current list__master">
           <picture>
             <source type="image/webp" srcset="img/master/plumber.webp 1x, img/master/plumber@2x.webp 2x" />
             <img class="slider__photo-master" src="img/master/plumber.png" srcset="img/master/plumber@2x.png 2x" alt="Фото Александра Сагина" title="Фото мастера" />
@@ -208,8 +206,10 @@
             <p class="list__subtitle"><b>Александр Сагин</b></p>
             <p class="list__name">Сантехник</p>
           </div>
-        </li>
-        <li class="slider__item list__master">
+        </div>
+      </div>
+      <div>
+        <div class="slider__item list__master">
           <picture>
             <source type="image/webp" srcset="img/master/electric.webp 1x, img/master/electric@2x.webp 2x" />
             <img class="slider__photo-master" src="img/master/electric.png" srcset="img/master/electric@2x.png 2x" alt="Фото Василия Панюкова" title="Фото мастера" />
@@ -218,8 +218,10 @@
             <p class="list__subtitle"><b>Василий Панюков</b></p>
             <p class="list__name">Электрик</p>
           </div>
-        </li>
-        <li class="slider__item list__master">
+        </div>
+      </div>
+      <div>
+        <div class="slider__item list__master">
           <picture>
             <source type="image/webp" srcset="img/master/decor.webp 1x, img/master/decor@2x.webp 2x" />
             <img class="slider__photo-master" src="img/master/decor.png" srcset="img/master/decor@2x.png 2x" alt="Фото Владимира Калугина" title="Фото мастера" />
@@ -228,87 +230,97 @@
             <p class="list__subtitle"><b>Владимир Калугин</b></p>
             <p class="list__name">Мастер-универсал по декору</p>
           </div>
-        </li>
-      </ul>
-      <!--<div class="slider__controls">
-        <button class="slider__button" type="button" aria-label="Первый слайд"></button>
-        <button class="slider__button" type="button" aria-label="Второй слайд"></button>
-        <button class="slider__button slider__button--current" type="button" aria-label="Третий слайд"></button>
-        <button class="slider__button" type="button" aria-label="Четвёртый слайд"></button>
-        <button class="slider__button" type="button" aria-label="Пятый слайд"></button>
-      </div>-->
+        </div>
+      </div>
+      </div>
     </section>
     <section class="page-body__slider page-body__slider--advantage slider page-body__advantage advantage">
-      <div class="advantage__list">
+      <div class="advantage__wrapper">
         <h2 class="page-body__title page-body__title--advantage">Трепетно относимся к&nbsp;деталям</h2>
         <p class="slider__desc"><b>Работаем по ГОСТ, СНиП и DIN. Используем собственные хорошие практики ремонта наработанные за 10 лет</b></p>
-        <ul class="responsive slider__list">
-          <li class="slider__item advantage__item">
-            <picture>
-              <source type="image/webp" srcset="img/other/sewerage.webp 1x, img/other/sewerage@2x.webp 2x" />
-              <img class="slider__photo" src="img/other/sewerage.jpeg" srcset="img/other/sewerage@2x.jpeg 2x" alt="Фото санузла и профессиональных инструментов" title="Сантехника и канализация" />
-            </picture>
-            <h3 class="slider__item-title">Подключим сантехнику и канализацию</h3>
-            <p class="slider__item-desc">Делаем разводку трубами REHAU.<span>Учитываем места установки отопительных приборов и мест установки сантехники и бытовой&nbsp;техники.</span></p>
-            <p class="slider__item-desc">Монтируем систему канализации,<br>устанавливаем фильтры грубой и тонкой очистки,&nbsp;счетчики.</p>
-            <p class="slider__item-desc slider__item-desc--last">25 лет без протечек!</p>
-          </li>
-          <li class="slider__item advantage__item">
-            <picture>
-              <source type="image/webp" srcset="img/other/layout.webp 1x, img/other/layout@2x.webp 2x" />
-              <img class="slider__photo" src="img/other/layout.jpeg" srcset="img/other/layout@2x.jpeg 2x" alt="3D - модель квартиры" title="Планировка" />
-            </picture>
-            <h3 class="slider__item-title">Сделаем планировку с нуля как на плане</h3>
-            <p class="slider__item-desc">Монтаж межкомнатных перегородок, демонтаж стен и полная перепланировка.</p>
-            <p class="slider__item-desc">Для квартир со свободной планировкой или при перепланировке.</p>
-            <p class="slider__item-desc">Все точно по проекту!</p>
-          </li>
-          <li class="slider__item advantage__item">
-            <picture>
-              <source type="image/webp" srcset="img/other/floor.webp 1x, img/other/floor@2x.webp 2x" />
-              <img class="slider__photo" src="img/other/floor.jpeg" srcset="img/other/floor@2x.jpeg 2x" alt="Фото заливки пола" title="Стяжка, гидро- и теплоизоляция" />
-            </picture>
-            <h3 class="slider__item-title">Сделаем стяжку, гидро- и теплоизоляцию</h3>
-            <p class="slider__item-desc">Делаем стяжку с учётом тепло- и гидроизоляции в “мокрых зонах”.</p>
-            <p class="slider__item-desc">При установке уровня учитываем тип напольного покрытия и используемый материал.</p>
-          </li>
-          <li class="slider__item advantage__item">
-            <picture>
-              <source type="image/webp" srcset="img/other/electricity.webp 1x, img/other/electricity@2x.webp 2x" />
-              <img class="slider__photo" src="img/other/electricity.jpeg" srcset="img/other/electricity@2x.jpeg 2x" alt="Фото работ с электрическим щитком" title="Провеедени электрики" />
-            </picture>
-            <h3 class="slider__item-title">Грамотно проводим электрику</h3>
-            <p class="slider__item-desc">Перед выполнением работ составим подробный план разводки с учетом расположения бытовых приборов, розеток,  точечных светильников духовых шкафов и плит, также учтём зонирование помещений и ваши персональные пожелания.</p>
-          </li>
-          <li class="slider__item advantage__item">
+        <div class="responsive slider__list advantage__list">
+          <div>
+            <div class="slider__item advantage__item">
+              <picture>
+               <source type="image/webp" srcset="img/other/sewerage.webp 1x, img/other/sewerage@2x.webp 2x" />
+               <img class="slider__photo" src="img/other/sewerage.jpeg" srcset="img/other/sewerage@2x.jpeg 2x" alt="Фото санузла и профессиональных инструментов" title="Сантехника и канализация" />
+              </picture>
+              <div>
+               <h3 class="slider__item-title">Подключим сантехнику и канализацию</h3>
+                <p class="slider__item-desc">Делаем разводку трубами REHAU.<span>Учитываем места установки отопительных приборов и мест установки сантехники и бытовой&nbsp;техники.</span></p>
+                <p class="slider__item-desc">Монтируем систему канализации,<br>устанавливаем фильтры грубой и тонкой очистки,&nbsp;счетчики.</p>
+                <p class="slider__item-desc slider__item-desc--last">25 лет без протечек!</p>
+             </div>
+            </div>
+          </div>
+          <div>
+            <div class="slider__item advantage__item">
+              <picture>
+                <source type="image/webp" srcset="img/other/layout.webp 1x, img/other/layout@2x.webp 2x" />
+                <img class="slider__photo" src="img/other/layout.jpeg" srcset="img/other/layout@2x.jpeg 2x" alt="3D - модель квартиры" title="Планировка" />
+             </picture>
+             <div>
+              <h3 class="slider__item-title">Сделаем планировку с&nbsp;нуля как на плане</h3>
+              <p class="slider__item-desc">Монтаж межкомнатных перегородок, демонтаж стен и полная перепланировка.</p>
+              <p class="slider__item-desc">Для квартир со свободной планировкой или при перепланировке.</p>
+              <p class="slider__item-desc">Все точно по проекту!</p>
+            `</div>
+            </div>
+          </div>
+          <div>
+            <div class="slider__item advantage__item">
+              <picture>
+                <source type="image/webp" srcset="img/other/floor.webp 1x, img/other/floor@2x.webp 2x" />
+                <img class="slider__photo" src="img/other/floor.jpeg" srcset="img/other/floor@2x.jpeg 2x" alt="Фото заливки пола" title="Стяжка, гидро- и теплоизоляция" />
+              </picture>
+              <div>
+                <h3 class="slider__item-title">Сделаем стяжку, гидро- и теплоизоляцию</h3>
+                <p class="slider__item-desc">Делаем стяжку с учётом тепло- и гидроизоляции в “мокрых зонах”.</p>
+                <p class="slider__item-desc">При установке уровня учитываем тип напольного покрытия и используемый материал.</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="slider__item advantage__item">
+              <picture>
+                <source type="image/webp" srcset="img/other/electricity.webp 1x, img/other/electricity@2x.webp 2x" />
+                <img class="slider__photo" src="img/other/electricity.jpeg" srcset="img/other/electricity@2x.jpeg 2x" alt="Фото работ с электрическим щитком" title="Провеедени электрики" />
+              </picture>
+              <div>
+                <h3 class="slider__item-title">Грамотно проводим электрику</h3>
+                <p class="slider__item-desc">Перед выполнением работ составим подробный план разводки с учетом расположения бытовых приборов, розеток,  точечных светильников духовых шкафов и плит, также учтём зонирование помещений и ваши персональные пожелания.</p>
+              </div>
+            </div>
+         </div>
+         <div>
+          <div class="slider__item advantage__item">
             <picture>
               <source type="image/webp" srcset="img/other/walls.webp 1x, img/other/walls@2x.webp 2x" />
               <img class="slider__photo" src="img/other/walls.jpeg" srcset="img/other/walls@2x.jpeg 2x" alt="Фото работ по армированию стен" title="Защита стен от повреждений" />
             </picture>
+            <div>
             <h3 class="slider__item-title">Защищаем стены от повреждений</h3>
             <p class="slider__item-desc">Используем армирующую сетку для выравнивания стен.</p>
             <p class="slider__item-desc">С ней стены становятся прочнее, а отделка защищена от любых сколов и трещин, которые могли появиться при усадке дома.</p>
-          </li>
-          <li class="slider__item advantage__item">
+          </div>
+          </div>
+          </div>
+          <div>
+          <div class="slider__item advantage__item">
             <picture>
               <source type="image/webp" srcset="img/other/plaster.webp 1x, img/other/plaster@2x.webp 2x" />
               <img class="slider__photo" src="img/other/plaster.jpeg" srcset="img/other/plaster@2x.jpeg 2x" alt="Фото оштукатуривания стен" title="Штукатурка стен" />
             </picture>
+            <div>
             <h3 class="slider__item-title">Идеально штукатурим по маякам</h3>
             <p class="slider__item-desc">Благодаря лазерным уровням точно располагаем маяки, по которым выравниваем поверхность.</p>
             <p class="slider__item-desc">Это позволяет сделать полы, стены и потолки идеально ровными, без уклонов и кривых углов.</p>
-          </li>
-        </ul>
-      <!--<div class="slider__controls">
-          <button class="slider__button" type="button" aria-label="Первый слайд"></button>
-          <button class="slider__button" type="button" aria-label="Второй слайд"></button>
-          <button class="slider__button slider__button--current" type="button" aria-label="Третий слайд"></button>
-          <button class="slider__button" type="button" aria-label="Четвёртый слайд"></button>
-          <button class="slider__button" type="button" aria-label="Пятый слайд"></button>
-          <button class="slider__button" type="button" aria-label="Шестой слайд"></button>
+          </div>
+          </div>
         </div>
+      </div>
         <button class="advantage__control advantage__control--prev" type="button" aria-label="Предыдущий слайд"></button>
-        <button class="advantage__control advantage__control--next" type="button" aria-label="Следующий слайд"></button>-->
+        <button class="advantage__control advantage__control--next" type="button" aria-label="Следующий слайд"></button>
       </div>
     </section>
     <section class="page-body__price price">
@@ -319,13 +331,13 @@
           <button class="price__control price__control--right" type="button">Вторичка</button>
         </div>
         <div class="price__new-building">
-          <ul class="slider__list">
+          <ul class="slider__list price__list">
             <li class="slider__item price__item">
               <h3 class="price__subtitle">Черновой ремонт</h3>
               <p class="price__bold"><b>от 4 462 ₽/м²</b></p>
               <p class="price__text">цена для кв 32 м²</p>
               <p class="price__text price__text--left">Предчистовая отделка новостройки позволит исправить геометрию стен, выровнять полы, заменить электрику и сантехнику.</p>
-              <button class="form__button price__button" type="button">Рассчитать стоимость 1 м²</button>
+              <button class="form__button form__button--price price__button" type="button">Рассчитать стоимость 1 м²</button>
               <a class="price__link" href="#portfolio">Посмотреть список работ</a>
             </li>
             <li class="slider__item price__item">
@@ -333,15 +345,15 @@
               <p class="price__bold"><b>от 3 791 ₽/м²</b></p>
               <p class="price__text">цена для кв 32 м²</p>
               <p class="price__text price__text--left">Чистовая отделка новостройки — это как последний штрих идеального ремонта. Предусмотрена замена напольного покрытия и отделки стен.</p>
-              <button class="form__button price__button" type="button">Рассчитать стоимость 1 м²</button>
+              <button class="form__button form__button--price price__button" type="button">Рассчитать стоимость 1 м²</button>
               <a class="price__link" href="#portfolio">Посмотреть список работ</a>
             </li>
             <li class="slider__item price__item">
               <h3 class="price__subtitle">Ремонт «под ключ»</h3>
               <p class="price__bold"><b>от 8 416 ₽/м²</b></p>
               <p class="price__text">цена для кв 32 м²</p>
-              <p class="price__text price__text--left">Комплексный ремонт квартиры с нуля.<br>После ремонта вы сможете заселиться и проживать в готовой квартире.</p>
-              <button class="form__button price__button" type="button">Рассчитать стоимость 1 м²</button>
+              <p class="price__text  price__text--left">Комплексный ремонт квартиры с нуля.<br>После ремонта вы сможете заселиться и проживать в готовой квартире.</p>
+              <button class="form__button form__button--price price__button" type="button">Рассчитать стоимость 1 м²</button>
               <a class="price__link" href="#portfolio">Посмотреть список работ</a>
             </li>
           </ul>
@@ -353,7 +365,7 @@
               <p class="price__bold"><b>от 2 730 ₽/м²</b></p>
               <p class="price__text price__text-center">цена для кв 32 м²</p>
               <p class="price__tex price__text--leftt">Черновой ремонт включает в себя:<br>Выравнивание стен, демонтаж существующих покрытий, стяжка пола, шпаклевка и штукатурка поверхностей, замена труб канализации и электрики.</p>
-              <button class="form__button price__button" type="button">Рассчитать стоимость 1 м²</button>
+              <button class="form__button form__button--price price__button" type="button">Рассчитать стоимость 1 м²</button>
               <a class="price__link" href="#portfolio">Посмотреть список работ</a>
             </li>
             <li class="slider__item price__item">
@@ -361,7 +373,7 @@
               <p class="price__bold"><b>от 2 680 ₽/м²</b></p>
               <p class="price__text price__text-center">цена для кв 32 м²</p>
               <p class="price__text price__text--left">Чистовой ремонт - финальный этап Вашего ремонта. Монтаж напольных покрытий, поклейка обоев, окраска стен и потолка. Предусмотрен монтаж сантехники и систем отопления.</p>
-              <button class="form__button price__button" type="button">Рассчитать стоимость 1 м²</button>
+              <button class="form__button form__button--price price__button" type="button">Рассчитать стоимость 1 м²</button>
               <a class="price__link" href="#portfolio">Посмотреть список работ</a>
             </li>
             <li class="slider__item price__item">
@@ -369,7 +381,7 @@
               <p class="price__bold"><b>от 8 416 ₽/м²</b></p>
               <p class="price__text">цена для кв 32 м²</p>
               <p class="price__text price__text--left">Комплексный ремонт квартиры с нуля.<br> После окончания ремонта квартира полностью готова к проживанию.</p>
-              <button class="form__button price__button" type="button">Рассчитать стоимость 1 м²</button>
+              <button class="form__button form__button--price  price__button" type="button">Рассчитать стоимость 1 м²</button>
               <a class="price__link" href="#portfolio">Посмотреть список работ</a>
             </li>
           </ul>
@@ -387,7 +399,7 @@
             </picture>
           </div>
           <div>
-            <h3 class="worksheet__title">Собственный склад черновых материалов в пределах МКАД</h3>
+            <h3 class="worksheet__title worksheet__title--detail">Собственный склад черновых материалов в пределах МКАД</h3>
             <p class="worksheet__text worksheet__text--stock">Экономим ваши деньги — закупаем у 28 надежных поставщиков по оптовым ценам со скидкой на объём.</p>
             <p class="worksheet__text worksheet__text--stock">Экономим ваше время — доставляем материалы на объект по требованию, чтобы избежать простоя.</p>
             <p class="worksheet__text worksheet__text--stock">Проверяем качество закупленных материалов. Храним материалы по ГОСТу.</p>
@@ -401,7 +413,7 @@
             <p class="worksheet__slogan"><b>Сделаем схему планировки или дизайн-проект!</b></p>
             <p class="worksheet__text">Сделаем план монтажа перегородок, разметку электрики и сантехники.</p>
             <p class="worksheet__text">Сделаем план зонирования помещений и расстановки мебели, визуализируем при необходимости.</p>
-            <p class="worksheet__text">Посчитаем черновые и чистовые материалы, сантехнику и электрику. Узаконим перепланировку без вашего участия.</p>
+            <p class="worksheet__text">Посчитаем черновые и чистовые материалы, сантехнику и электрику.<br>Узаконим перепланировку без вашего участия.</p>
             <button class="form__button form__button--worksheet form__buttom-mobile" type="button">Получить помощь у дизайнера</button>
           </div>
           <div class="worksheet__content-photo">
@@ -442,47 +454,46 @@
       </div>
     </div>
   </footer>
-  <script src="js/script.min.js"></script>
-  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-  <script type="text/javascript" src="slick/slick.min.js"></script>
 
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="slick/slick.min.js"></script>
   <script type="text/javascript">
-  $('.responsive').slick({
-    dots: true,
-    infinite: false,
-    speed: 300,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 1900,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true
-        }
-      },
-      {
-        breakpoint: 1200,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
+$('.responsive').slick({
+  dots: true,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  nextArrow: '.advantage__control--next',
+  prevArrow: '.advantage__control--prev',
+  responsive: [
+    {
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1
       }
-      // You can unslick at a given breakpoint now by adding:
-      // settings: "unslick"
-      // instead of a settings object
-    ]
-  });
-  </script>
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+});
+	
+		</script>
+
+  <script src="js/script.min.js"></script>
 </body>
 </html>

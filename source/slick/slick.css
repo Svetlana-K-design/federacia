@@ -100,7 +100,7 @@
 }
 .slick-initialized .slick-slide
 {
-    display: flex;
+    display: block;
 }
 .slick-loading .slick-slide
 {
@@ -116,10 +116,4 @@
 }
 .slick-arrow.slick-hidden {
     display: none;
-}
-
-.slick-dots {
-  display: flex;
-  flex-direction: row;
-  margin: 0 auto;
 }

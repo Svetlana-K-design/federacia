@@ -18,21 +18,75 @@
   margin: 0 auto;
   margin-bottom: 48px;
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @desktop-width) {
     margin-bottom: 95px;
   }
 }
 
 .page-body__estimate {
   margin: 0 auto;
-  margin-bottom: 46px;
+  margin-bottom: 48px;
 
-  @media (min-width: @tablet-width) {
-    margin-bottom: 292px;
+  @media (min-width: @desktop-width) {
+    margin-bottom: 309px;
   }
 
-  @media (min-width: 1920px) {
-    margin-bottom: 286px;
+  @media (min-width: 1996px) and (max-width: 2060px) {
+    margin-bottom: 346px;
+  }
+   
+  @media (min-width: 2061px) {
+    margin-bottom: 381px;
+  }
+}
+
+
+.page-body__service {
+  margin-bottom: 50px;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 81px;
+  }
+}
+
+.page-body__advantage {
+  margin-bottom: 51px;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 76px;
+  }
+}
+
+.page-body__portfolio {
+  margin-bottom: 76px;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 112px;
+  }
+}
+
+
+.page-body__worksheet {
+  margin-bottom: 50px;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 78px;
+  }
+}
+
+.page-body__master {
+  margin-bottom: 96px;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 126px;
+  }
+}
+
+.page-body__worksheet--detail {
+  margin-bottom: 0;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
   }
 }
 
@@ -54,7 +108,7 @@
   }
 
   &--price {
-    margin-bottom: 22px;
+    margin-bottom: 27px;
   }
 
   &--worksheet {
@@ -69,12 +123,16 @@
     margin-bottom: 22px;
   }
 
-  @media (min-width: @tablet-width) {
+  &--detail {
+    margin-bottom: 18px;
+  }
+
+  @media (min-width: @desktop-width) {
     font-size: 38px;
     line-height: 42px;
 
     &--worksheet {
-      margin-bottom: 5px;
+      margin-bottom: 12px;
       text-align: left;
     }
 
@@ -83,62 +141,25 @@
     }
 
     &--master {
-      margin-bottom: 32px;
+      margin-bottom: 41px;
+    }
+
+    &--advantage {
+      margin-bottom: 18px;
+    }
+
+    &--price {
+      margin-bottom: 23px;
+    }
+
+    &--detail {
+      margin-bottom: 25px;
     }
   }
 }
 
 .page-body__title-mobile {
-  @media (min-width: @tablet-width) {
+  @media (min-width: @desktop-width) {
     display: none;
-  }
-}
-
-.page-body__service {
-  margin-bottom: 50px;
-
-  @media (min-width: @tablet-width) {
-    margin-bottom: 81px;
-  }
-}
-
-.page-body__advantage {
-  margin-bottom: 50px;
-
-  @media (min-width: @tablet-width) {
-    margin-bottom: 43px;
-  }
-}
-
-.page-body__portfolio {
-  margin-bottom: 76px;
-
-  @media (min-width: @tablet-width) {
-    margin-bottom: 118px;
-  }
-}
-
-
-.page-body__worksheet {
-  margin-bottom: 50px;
-
-  @media (min-width: @tablet-width) {
-    margin-bottom: 80px;
-  }
-}
-
-.page-body__master {
-  margin-bottom: 96px;
-
-  @media (min-width: @tablet-width) {
-    margin-bottom: 123px;
-  }
-}
-
-.page-body__worksheet--detail {
-  margin-bottom: 0;
-
-  @media (min-width: @tablet-width) {
-    margin-bottom: 0;
   }
 }

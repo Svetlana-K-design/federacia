@@ -3,14 +3,27 @@
   margin: 0 auto;
   padding: 0 24px 34px;
 
-  @media (min-width: @tablet-width) {
-    margin-bottom: 91px;
+  @media (min-width: @desktop-width) {
+    margin-bottom: 44px;
+    padding: 0 24px 19px;
+  }
+}
+
+.price__list {
+  flex-direction: column;
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
   }
 }
 
 .price__controls {
   text-align: center;
-  margin-bottom: 26px;
+  margin-bottom: 23px;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 21px;
+  }
 }
 
 .price__control {
@@ -40,7 +53,7 @@
     text-align: right;
     padding-right: 0;
     padding-left: 42px;
-  }
+  } 
 }
 
 .price__item {
@@ -53,7 +66,7 @@
   text-align: center;
   margin-bottom: 17px;
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @desktop-width) {
     width: 310px;
     margin-bottom: 0;
   }
@@ -100,6 +113,7 @@
   display: block;
   width: 100%;
   margin-bottom: 10px;
+  font-size: 16px;
 }
 
 .price__link {
