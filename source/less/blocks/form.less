@@ -13,8 +13,8 @@
   fieldset {
     border: none;
     padding: 0;
-    padding-bottom: 7px;
     margin: 0;
+    margin-bottom: 7px;
   }
 }
 
@@ -102,6 +102,7 @@
 datalist {
   display: flex;
   width: 98%;
+  max-width: 298px;
   justify-content: space-between;
   margin-top: -8px;
 
@@ -117,6 +118,7 @@ datalist {
 
 input[type=range] {
   width: 98%;
+  max-width: 298px;
   appearance: none;
   overflow: hidden;
 }
@@ -216,11 +218,15 @@ input[type="range"]::-ms-fill-upper {
   }
 
   &--footer {
-    padding: 15px 23px;
+    padding: 15px 24px;
   }
 
   &--price {
     padding: 15px 34px;
+  }
+
+  &--design {
+    padding: 15px 43px;
   }
 
   @media (min-width: @desktop-width) {
@@ -228,7 +234,15 @@ input[type="range"]::-ms-fill-upper {
     padding: 15px 43px;
 
     &--stock {
-      padding: 15px 23px;
+      padding: 15px 24px;
+    }
+
+    &--footer {
+      padding: 15px 24px;
+    }
+
+    &--design {
+      padding: 15px 24px;
     }
   }
 }
@@ -241,14 +255,7 @@ input[type="range"]::-ms-fill-upper {
   @media (min-width: @desktop-width) {
     width: initial;
     margin-bottom: 0;
-    padding: 15px 23px;
+    padding: 15px 60px;
   }
 }
 
-.form__buttom-mobile {
-  display: none;
-
-  @media (min-width: @desktop-width) {
-    display: block;
-  }
-}

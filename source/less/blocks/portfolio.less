@@ -1,3 +1,35 @@
+.portfolio__wrapper {
+  margin: 0 auto;
+  padding: 47px 24px;
+  position: relative;
+
+  @media (min-width: @desktop-width) {
+    padding: 78px 0;
+  }
+}
+
 .portfolio__item {
+  width: 312px;
+
+  @media (min-width: @desktop-width) {
   max-width: 540px;
+  }
+}
+
+.portfolio__wrapper .slider__control--prev  {
+  top: 53%;
+  left: 8px;
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.portfolio__wrapper .slider__control--next  {
+  top: 53%;
+  right: 8px;
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
 }

@@ -2,11 +2,12 @@
   width: 100%;
   background-image: url("../img/other/apartment-background-mobile.jpeg");
   background-repeat: no-repeat;
-  background-size: initial;
+  background-size: contain;
   background-position: top center;
 
   @media (min-width: @tablet-width) {
     background-image: url("../img/other/apartment-background.jpeg");
+    background-size: initial;
   }
 
   @media (min-width: 1920px) {
@@ -14,152 +15,3 @@
   }
 }
 
-.page-body__header {
-  margin: 0 auto;
-  margin-bottom: 48px;
-
-  @media (min-width: @desktop-width) {
-    margin-bottom: 95px;
-  }
-}
-
-.page-body__estimate {
-  margin: 0 auto;
-  margin-bottom: 48px;
-
-  @media (min-width: @desktop-width) {
-    margin-bottom: 309px;
-  }
-
-  @media (min-width: 1996px) and (max-width: 2060px) {
-    margin-bottom: 346px;
-  }
-   
-  @media (min-width: 2061px) {
-    margin-bottom: 381px;
-  }
-}
-
-
-.page-body__service {
-  margin-bottom: 50px;
-
-  @media (min-width: @desktop-width) {
-    margin-bottom: 81px;
-  }
-}
-
-.page-body__advantage {
-  margin-bottom: 51px;
-
-  @media (min-width: @desktop-width) {
-    margin-bottom: 76px;
-  }
-}
-
-.page-body__portfolio {
-  margin-bottom: 76px;
-
-  @media (min-width: @desktop-width) {
-    margin-bottom: 112px;
-  }
-}
-
-
-.page-body__worksheet {
-  margin-bottom: 50px;
-
-  @media (min-width: @desktop-width) {
-    margin-bottom: 78px;
-  }
-}
-
-.page-body__master {
-  margin-bottom: 96px;
-
-  @media (min-width: @desktop-width) {
-    margin-bottom: 126px;
-  }
-}
-
-.page-body__worksheet--detail {
-  margin-bottom: 0;
-
-  @media (min-width: @desktop-width) {
-    margin-bottom: 0;
-  }
-}
-
-.page-body__title {
-  font-size: 28px;
-  line-height: 32px;
-  font-weight: 700;
-  margin: 0;
-  margin-bottom: 11px;
-
-  &--worksheet,
-  &--price,
-  &--detail {
-    text-align: center;
-  }
-
-  &--master {
-    margin-bottom: 25px;
-  }
-
-  &--price {
-    margin-bottom: 27px;
-  }
-
-  &--worksheet {
-    margin-bottom: 16px;
-  }
-
-  &--portfolio {
-    margin-bottom: 26px;
-  }
-
-  &--advantage {
-    margin-bottom: 22px;
-  }
-
-  &--detail {
-    margin-bottom: 18px;
-  }
-
-  @media (min-width: @desktop-width) {
-    font-size: 38px;
-    line-height: 42px;
-
-    &--worksheet {
-      margin-bottom: 12px;
-      text-align: left;
-    }
-
-    &--portfolio {
-      margin-bottom: 15px;
-    }
-
-    &--master {
-      margin-bottom: 41px;
-    }
-
-    &--advantage {
-      margin-bottom: 18px;
-    }
-
-    &--price {
-      margin-bottom: 23px;
-    }
-
-    &--detail {
-      margin-bottom: 25px;
-    }
-  }
-}
-
-.page-body__title-mobile {
-  @media (min-width: @desktop-width) {
-    display: none;
-  }
-}

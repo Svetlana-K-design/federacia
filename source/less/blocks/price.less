@@ -1,11 +1,14 @@
+.price {
+  width: 100%;
+}
+
 .price__wrapper {
   max-width: 1110px;
   margin: 0 auto;
-  padding: 0 24px 34px;
+  padding: 50px 24px 34px;
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 44px;
-    padding: 0 24px 19px;
+    padding: 81px 24px;
   }
 }
 
@@ -24,36 +27,6 @@
   @media (min-width: @desktop-width) {
     margin-bottom: 21px;
   }
-}
-
-.price__control {
-  background-color: @white-basic;
-  padding-bottom: 5px;
-  border: none;
-  border-bottom: 1px solid #a2a2a2;
-  color: #a2a2a2;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 20px;
-  font-family: "Qanelas", "Tahoma", sans-serif;
-  text-align: left;
-
-  &--active {
-    color:  @decor-blue;
-    border-bottom: 1px solid @decor-blue;
-  }
-
-  &--left {
-    text-align: left;
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  &--right {
-    text-align: right;
-    padding-right: 0;
-    padding-left: 42px;
-  } 
 }
 
 .price__item {
@@ -105,9 +78,15 @@
 }
 
 .price__item:nth-child(2) .price__text--left {
-
   margin-bottom: 12px;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 32px;
+  }
+
 }
+
+/**Button**/
 
 .price__button {
   display: block;
@@ -116,7 +95,7 @@
   font-size: 16px;
 }
 
-.price__link {
+.price__item-link {
   display: block;
   width: 98.5%;
   font-size: 16px;
@@ -127,4 +106,61 @@
   padding: 13px 0;
   text-align: center;
   border-radius: 5px;
+}
+
+.price__tabs {
+	display: flex;
+	flex-wrap: wrap;
+  justify-content: center;
+}
+
+.price__tabs label {
+	order: 1; 
+	display: block;
+	font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+  color: #a2a2a2;
+	cursor: pointer;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #a2a2a2;
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 2px;
+  }
+
+}
+
+.price__tabs label:last-of-type {
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 48px;
+    height: 1px;
+  }
+}
+
+.price__tabs .price__tab {
+  order: 99;
+  flex-grow: 1;
+	width: 100%;
+	display: none;
+  padding: 25px 0 0;
+
+  @media (min-width: @desktop-width) {
+    padding: 22px 0 0;
+  }
+}
+
+.price__tabs input[type="radio"] {
+	display: none;
+}
+
+.price__tabs input[type="radio"]:checked + label {
+	border-bottom: 1px solid @decor-blue;
+  color: @decor-blue;
+}
+
+.price__tabs input[type="radio"]:checked + label + .price__tab {
+	display: block;
 }

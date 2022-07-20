@@ -18,3 +18,71 @@ img {
 a {
   text-decoration: none;
 }
+
+.title-h2 {
+  font-size: 28px;
+  line-height: 32px;
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 11px;
+
+  &--worksheet,
+  &--price,
+  &--detail {
+    text-align: center;
+  }
+
+  &--master {
+    margin-bottom: 25px;
+  }
+
+  &--price {
+    margin-bottom: 27px;
+  }
+
+  &--worksheet {
+    margin-bottom: 16px;
+  }
+
+  &--portfolio {
+    margin-bottom: 26px;
+  }
+
+  &--advantage {
+    margin-bottom: 22px;
+  }
+
+  &--detail {
+    margin-bottom: 25px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 38px;
+    line-height: 42px;
+
+    &--worksheet {
+      margin-bottom: 12px;
+      text-align: left;
+    }
+
+    &--portfolio {
+      margin-bottom: 15px;
+    }
+
+    &--master {
+      margin-bottom: 38px;
+    }
+
+    &--advantage {
+      margin-bottom: 18px;
+    }
+
+    &--price {
+      margin-bottom: 26px;
+    }
+
+    &--detail {
+      margin-bottom: 30px;
+    }
+  }
+}
