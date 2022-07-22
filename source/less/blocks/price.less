@@ -1,5 +1,6 @@
 .price {
   width: 100%;
+  background-color: @white-basic;
 }
 
 .price__wrapper {
@@ -13,10 +14,8 @@
 }
 
 .price__list {
-  flex-direction: column;
-
   @media (min-width: @desktop-width) {
-    flex-direction: row;
+    display: flex;
   }
 }
 

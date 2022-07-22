@@ -1,9 +1,14 @@
 .page-body {
   width: 100%;
+  height: auto;
   background-image: url("../img/other/apartment-background-mobile.jpeg");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: top center;
+
+  @media (min-width: @mobile-width) {
+    background-size: contain;
+  }
 
   @media (min-width: @tablet-width) {
     background-image: url("../img/other/apartment-background.jpeg");
@@ -14,4 +19,3 @@
     background-size: contain;
   }
 }
-

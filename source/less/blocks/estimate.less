@@ -1,4 +1,8 @@
 .estimate {
+  width: 100%;
+}
+
+.estimate__wrapper {
   max-width: 1051px;
   padding: 0 24px 48px;
   margin: 0 auto;
@@ -6,16 +10,21 @@
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: space-between;
-    padding: 0 20px 309px;
+    padding: 0 20px 252px;
   }
 }
 
 .estimate__text {
   margin-bottom: 24px;
 
+  @media (min-width: @tablet-width) {
+    padding-top: 25px;
+  }
+
   @media (min-width: @desktop-width) {
     margin-right: 102px;
     margin-bottom: 0;
+    padding-top: 0;
   }
 }
 
@@ -62,7 +71,7 @@
   padding: 3px 0 1px 21px;
 
   @media (min-width: 380px) and (max-width: @tablet-width) {
-    width: max-content;
+    width: 62%;
   } 
 
   @media (min-width: @desktop-width) {
@@ -81,7 +90,7 @@
 
 
 @media (min-width: 380px) and (max-width: @tablet-width) {
-  width: max-content;
+  width: 55%;
 } 
 
   @media (min-width: @desktop-width) {
@@ -99,7 +108,7 @@
   padding: 5px 0 2px 21px;
 
   @media (min-width: 380px) and (max-width: @tablet-width) {
-    width: min-content;
+    width: 39%;
     padding: 5px 0 1px 21px;
   } 
 

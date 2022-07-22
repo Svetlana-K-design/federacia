@@ -1,4 +1,9 @@
 .header {
+  width: 100%;
+  height: auto;
+}
+
+.header__wrapper { 
   max-width: 1051px;
   margin: 0 auto;
   display: flex;
@@ -7,41 +12,105 @@
   padding: 30px 24px 48px 24px;
   z-index: 3;
 
-
-
   @media (min-width: @tablet-width) {
-    padding: 20px 20px 95px 20px;
+    padding: 20px 20px 20px 20px;  
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 20px 20px 95px 20px;  
   }
 }
 
+
 .header__logo {
-  z-index: 4;
+  
   @media (min-width: @tablet-width) {
     margin-right: 275px;
   }
 }
 
-.header__navigation {
+.header__menu {
   margin-left: auto;
+  position: relative;
 
     @media (min-width: @tablet-width) {
       margin-left: 0;
   }
 }
 
-.header--white {
-  position: relative;
-  z-index: 3;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: -70px;
-    right: -24px;
-    width: 360px;
-    height: 329px;
-    background-color: @white-basic;
-    z-index: -1;
+.header__toggle {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  border: none;
+  top: -25px;
+  right: 14px;
+  padding: 0;
+
+  &:focus {
+    outline: none;
   }
 }
 
+.header__toggle::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 8px;
+  width: 24px;
+  height: 2px;
+  background-color: @decor-blue;
+  box-shadow: 0 8px 0 0 @decor-blue, 0 16px 0 0 @decor-blue;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .header__navigation--closed .navigation__list {
+    display: none;
+  }
+
+  .header__navigation--opened .navigation__list {
+    display: block;
+    position: absolute;
+    top: 75px;
+    right: -20px;
+    width: 320px;
+  }
+}
+
+
+.header__navigation--opened .header__toggle {
+  margin-left: 20px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    right: 0;
+    width: 25px;
+    height: 3px;
+    background-color: @decor-blue;
+  }
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.header__navigation--opened .header__toggle::before {
+  transform: rotate(45deg);
+}
+
+.header__navigation--opened .header__togglee::after {
+  transform: rotate(-45deg);
+}
+
+/**.navigation--nojs .navigation__toggle {
+  display: none;
+}**/

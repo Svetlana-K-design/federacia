@@ -37,32 +37,14 @@
 }
 
 .purchase__content {
-  
-    &--text {
-      position: relative;
-  
-      &::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 70px;
-        width: 4px;
-        height: 228px;
-        background-color: #cce1ff;
-      }
-    }
-  
-    @media (min-width: @desktop-width) {
-      margin-right: 30px;
-  
-      &--text {
-        &::before {
-          top: 80px;
-          height: 180px;
-        }
-      }
-    }
+  @media (min-width: @desktop-width) {
+    margin-right: 30px;
   }
+}
+
+.purchase__decor {
+  border-left: 4px solid #cce1ff;
+}
   
 .purchase__content--photo {
     margin-bottom: 20px;
