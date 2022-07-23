@@ -437,6 +437,9 @@ a {
   width: 100%;
   height: auto;
 }
+.header--white {
+  background-color: #ffffff;
+}
 .header__wrapper {
   max-width: 1051px;
   margin: 0 auto;
@@ -483,7 +486,7 @@ a {
 .header__toggle:focus {
   outline: none;
 }
-.header__toggle::before {
+.header__menu--closed .header__toggle::before {
   content: "";
   position: absolute;
   top: 6px;
@@ -494,27 +497,28 @@ a {
   box-shadow: 0 8px 0 0 #0069ff, 0 16px 0 0 #0069ff;
 }
 @media (min-width: 768px) {
-  .header__toggle::before {
+  .header__menu--closed .header__toggle::before {
     display: none;
   }
 }
 @media (max-width: 767px) {
-  .header__navigation--closed .navigation__list {
+  .header__menu--closed .header__navigation {
     display: none;
   }
-  .header__navigation--opened .navigation__list {
-    display: block;
+  .header__menu--opened .header__navigation {
+    width: auto;
     position: absolute;
-    top: 75px;
-    right: -20px;
-    width: 320px;
+    right: -47px;
+    top: 63px;
+    background-color: #ffffff;
+    padding: 20px 27px;
   }
 }
-.header__navigation--opened .header__toggle {
+.header__menu--opened .header__toggle {
   margin-left: 20px;
 }
-.header__navigation--opened .header__toggle::before,
-.header__navigation--opened .header__toggle::after {
+.header__menu--opened .header__toggle::before,
+.header__menu--opened .header__toggle::after {
   content: "";
   position: absolute;
   top: 15px;
@@ -524,14 +528,14 @@ a {
   background-color: #0069ff;
 }
 @media (min-width: 768px) {
-  .header__navigation--opened .header__toggle {
+  .header__menu--opened .header__toggle {
     display: none;
   }
 }
-.header__navigation--opened .header__toggle::before {
+.header__menu--opened .header__toggle::before {
   transform: rotate(45deg);
 }
-.header__navigation--opened .header__togglee::after {
+.header__menu--opened .header__toggle::after {
   transform: rotate(-45deg);
 }
 /**.navigation--nojs .navigation__toggle {
@@ -640,7 +644,6 @@ a {
   margin: 0;
   padding: 0;
   list-style: none;
-  padding-bottom: 30px;
 }
 @media (min-width: 768px) {
   .navigation__list {
@@ -856,12 +859,15 @@ a {
 .master__caption {
   order: -1;
   text-align: left;
-  padding-bottom: 19px;
   width: 41%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 95px;
 }
 @media (min-width: 1200px) {
   .master__caption {
-    padding-bottom: 50px;
+    height: 154px;
   }
 }
 .master__subtitle {
@@ -1038,7 +1044,6 @@ a {
 @media (min-width: 1200px) {
   .slider__photo-master {
     width: 280px;
-    min-height: 355px;
   }
 }
 .slider__photo {
