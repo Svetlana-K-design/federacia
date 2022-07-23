@@ -48,9 +48,14 @@ const html = () => {
 // Scripts
 
 const scripts = () => {
-  return gulp.src("source/js/script.js")
+  return gulp.src("source/js/*.js")  // gulp.src("source/js/script.js") 
     .pipe(uglify())
-    .pipe(rename("script.min.js"))
+    //.pipe(rename("script.min.js"))
+    .pipe(rename(function (path) {
+      // path.dirname += "/js";
+       path.basename += ".min";
+       path.extname = ".js";
+    }))
     .pipe(gulp.dest("build/js"))
     .pipe(sync.stream());
 }
@@ -142,7 +147,7 @@ const reload = () => {
 
 const watcher = () => {
   gulp.watch("source/less/**/*.less", gulp.series(styles));
-  gulp.watch("source/js/script.js", gulp.series(scripts));
+  gulp.watch("source/js/**/*.js", gulp.series(scripts));
   gulp.watch("source/*.html", gulp.series(html, reload));
 }
 
@@ -185,6 +190,7 @@ gulp.task('deploy', function() {
   return gulp.src('./build/**/*')
     .pipe(ghPages());
 });
+
 
 //GulpContact 
 

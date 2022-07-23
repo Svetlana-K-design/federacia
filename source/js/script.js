@@ -47,9 +47,9 @@ $(document).ready(function() {
 		{
 			breakpoint: 1400,
 			settings: {
-				arrows: true,
+				arrows: false,
 				dots: true,
-				slidesToShow: 2,
+				slidesToShow: 3,
 				slidesToScroll: 1,
 				centerMode: false,
 			}
@@ -65,7 +65,6 @@ $(document).ready(function() {
 				dots: true,				
 			}
 		}
-
 		]
 	});
 
@@ -82,12 +81,19 @@ $(document).ready(function() {
     slidesToScroll: 1,
     responsive: [ 	
     {
-      breakpoint: 1200,
+      breakpoint: 1400,
       settings: {
-        slidesToShow: 2,
-        arrows: true,
+        slidesToShow: 3,
+        arrows: false,
       }
     },
+
+	{
+		breakpoint: 1200,
+		settings: {
+		  arrows: false,
+		}
+	  },
 
     {
       breakpoint: 481,
@@ -99,4 +105,5 @@ $(document).ready(function() {
 
     ]
   });
+
 });

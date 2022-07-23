@@ -1,5 +1,5 @@
-let btnMenu = document.querySelector('.navigation__toggle').addEventListener('click', () => {
-        document.querySelector('.navigation__toggle').classList.toggle('active')
-        document.querySelector('.header__navigation').classList.toggle('active');
-        document.querySelector('body').classList.toggle('active');
+$(document).ready(function() { 
+    $('.header__toggle').click(function(event) {
+        $('.header__toggle, .header__navigation, .header').toggleClass('active');
     });
+});
